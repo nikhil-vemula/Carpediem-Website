@@ -1,0 +1,226 @@
+/* css mobile first approach */
+body {
+    background: black;
+    color: white;
+}
+#main{
+    margin-top: 60px;        
+    display: none;
+}
+#titans{
+    background: #3F85BD;
+    padding-top: 30px;
+}
+#titans-content{
+    background:#3F85BD;
+    text-align: center;
+}
+#vulcans{
+    background: #DB492F;
+    padding-top: 30px;    
+}
+#vulcans-content{
+    background:#DB492F;
+    text-align: center;
+}
+/* Extra Small Devices, Phones */
+
+@media only screen and (min-width: 320px) {
+    #triton{
+        height: 200px;
+        margin: auto;
+    }
+    #titans{
+        height: 50vh;
+    }
+    #titans:hover, #titans:focus{
+        background: #5DAEE6;
+        background-image: url("../images/pattern.png");        
+    }
+    #vulcans{
+        height: 50vh;        
+    }
+    #vulcans:hover, #vulcans:focus{
+        background:#D8807E;
+        background-image: url("../images/pattern.png");    
+    }
+    #vulcans-content{
+        width: 0%;
+        height: 50vh;        
+        position: fixed;
+        top:0%;
+        left: 0%;
+        z-index: 1;  
+        opacity: 0;      
+    }
+    #titans-content{
+        width: 0%;
+        height: 50vh;        
+        position: fixed;
+        top: 50vh;
+        right: 0%;
+        z-index: 1;
+        opacity: 0;        
+    }
+    .clan-selected{
+        animation: cselected 1s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+    @keyframes cselected{
+        from{
+            width: 0%;
+        }
+        to{
+            width: 100%;
+            opacity: 1;
+        }
+    }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) {
+    /* nav bar */
+    .navbar-inverse .navbar-nav>li>a{
+        font-size: 20px;
+    }    
+    .navbar-inverse .navbar-nav>.active>a,
+    .navbar-inverse .navbar-nav>.active>a:focus,
+    .navbar-inverse .navbar-nav>.active>a:hover {
+        animation: select 0.25s;
+        animation-fill-mode: forwards;
+        background-color: transparent;
+        color: white;
+        animation-timing-function: ease;
+    }
+    @keyframes select {
+        from {
+        }
+        to {
+            border-bottom: 1px solid blue;
+        }
+    }
+    .navbar-inverse {
+        background-color: transparent;
+        border-color: transparent;
+    }
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+    /* choose */
+    #titans{
+        height: 100vh;
+    }
+    #titans:hover{
+        background: #5DAEE6;
+        background-image: url("../images/pattern.png");        
+    }
+    #vulcans{
+        height: 100vh;
+    }
+    #vulcans:hover{
+        background:#D8807E;
+        background-image: url("../images/pattern.png");    
+    }
+    #vulcans-content{
+        width: 0%;
+        height: 100vh;        
+        position: fixed;
+        top:0%;
+        left: 0%;
+        z-index: 1;  
+        opacity: 0;      
+    }
+    #titans-content{
+        width: 0%;
+        height: 100vh;        
+        position: fixed;
+        top:0%;
+        right: 0%;
+        z-index: 1;
+        opacity: 0;
+    }
+    #triton{
+        height: 500px;
+    }
+    .clan-selected{
+        animation: cselected 1s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+    @keyframes cselected{
+        from{
+            width: 0%;
+        }
+        to{
+            width: 50%;
+            opacity: 1;
+        }
+    }
+    #titans-content .btn-danger{
+        font-size: 20px;
+        background: #5DAEE6;
+        border: 0px;
+    }
+    #vulcans-content .btn-danger{
+        font-size: 20px;
+        background: #D8807E;
+        border: 0px;
+    }
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 992px) {}
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1200px) {}
+
+/* snow */
+body { background-color:#333; }
+#snow{
+    pointer-events: none;
+	background: none;
+	font-family: Androgyne;
+	background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index:1;
+	-webkit-animation: snow 10s linear infinite;
+	-moz-animation: snow 10s linear infinite;
+	-ms-animation: snow 10s linear infinite;
+	animation: snow 10s linear infinite;
+}
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}	
