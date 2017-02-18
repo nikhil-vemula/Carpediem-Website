@@ -26,9 +26,13 @@ body {
 /* Extra Small Devices, Phones */
 
 @media only screen and (min-width: 320px) {
+    #cys{
+        display: none;
+    }
     #triton{
         height: 200px;
         margin: auto;
+        cursor: pointer;        
     }
     #titans{
         height: 50vh;
@@ -115,6 +119,14 @@ body {
         text-align: center;
     }
     /* choose */
+    #cys{
+        font-size: 30px;
+        z-index: 3;
+        display: block;
+        position: fixed;
+        top: 50%;
+        left: 39vw;
+    }
     #titans{
         height: 100vh;
     }
@@ -149,6 +161,7 @@ body {
     }
     #triton{
         height: 500px;
+        cursor: pointer;
     }
     .clan-selected{
         animation: cselected 1s;
